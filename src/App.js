@@ -9,7 +9,7 @@ import Shop from './pages/Shop';
 import SignInAndSignUp from './pages/SignInAndSignUp';
 import Header from './components/Header';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
-import { setCurrentUser } from './redux/user/actions';
+import { setCurrentUser } from './redux/user/userActions';
 
 
 class App extends React.Component {
