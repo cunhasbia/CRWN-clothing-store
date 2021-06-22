@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
@@ -12,6 +12,7 @@ import CheckoutPage from './pages/Checkout';
 import Header from './components/Header';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+
 import { setCurrentUser } from './redux/user/userActions';
 import { selectCurrentUser } from './redux/user/userSelectors';
 
@@ -43,7 +44,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <React.Fragment>
         <Header />
         <Switch>
           <Route path="/" exact component={Home} />
@@ -57,7 +58,7 @@ class App extends React.Component {
             }
           />
         </Switch>
-      </BrowserRouter>
+      </React.Fragment>
     );
   }
 }
