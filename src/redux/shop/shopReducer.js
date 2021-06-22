@@ -6,7 +6,6 @@ const initialState = {
 
 const shopReducer = (state = initialState, { type, payload }) => {
     switch (type) {
-        
         default:
             return state;
     }
